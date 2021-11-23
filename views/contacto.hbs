@@ -1,0 +1,35 @@
+        <div class="contacto">
+            <h2>Complete el siguiente formulario</h2>
+            <form action="/contacto" method="post" class="formulario">
+                <p>
+                    <label for="">Nombre</label>
+                    <input name="nombre" type="text" required>
+                </p>
+                <p>
+                    <label for="">Email</label>
+                    <input name="email" type="email" required>
+                </p>
+                <p>
+                    <label for="">Telefono</label>
+                    <input name="tel" type="number" required>
+                </p>
+                <p>
+                    <label for="">Mensaje</label>
+                    <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+                </p>
+                <p class="centrar"><input type="submit"></p>
+            </form>
+            {{#if message}}
+                <p class="msg-send">{{message}}</p>
+            {{/if}}
+        </div>
+        <div class="redes">
+            <h2>Otras vias de contacto</h2>
+            <p>Pueden contactarnos a traves de los siguienes medios</p>
+            <ul>
+                <li><span>Telefono:</span> 555444333</li>
+                <li><span>Facebook:</span> <a href="#">RusticFB</a></li>
+                <li><span>Twitter:</span> <a href="#">RusticTW</a></li>
+                <li><span>Instagram</span> <a href="#">RusticINS</a></li>
+            </ul>
+        </div>
