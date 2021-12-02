@@ -1,19 +1,9 @@
 <h2>Novedades</h2>
+{{#each novedades}}
         <div class="novedades">
-            <h3>Titulo</h3>
-            <h4>Subtitulo</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptate voluptas aspernatur alias voluptatum ea harum, inventore eveniet sint, sit dicta vitae delectus assumenda? Assumenda possimus laboriosam doloribus pariatur perspiciatis!</p>
+            <h3>{{titulo}}</h3>
+            <h4>{{subtitulo}}</h4>
+            <p>{{{cuerpo}}}</p>
             <br>
         </div>
-        <div class="novedades">
-            <h3>Titulo</h3>
-            <h4>Subtitulo</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptate voluptas aspernatur alias voluptatum ea harum, inventore eveniet sint, sit dicta vitae delectus assumenda? Assumenda possimus laboriosam doloribus pariatur perspiciatis!</p>
-            <br>
-        </div>
-        <div class="novedades">
-            <h3>Titulo</h3>
-            <h4>Subtitulo</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptate voluptas aspernatur alias voluptatum ea harum, inventore eveniet sint, sit dicta vitae delectus assumenda? Assumenda possimus laboriosam doloribus pariatur perspiciatis!</p>
-            <br>
-        </div>
+{{/each}}
