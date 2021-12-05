@@ -19,3 +19,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.buscador{
+    float: right;
+    position: relative;
+    bottom: 35px;
+}

@@ -3,7 +3,7 @@
     {{!-- inicio fila 1 --}}
     <div class="row">
         <div class="col">
-            <p class="text-end">Hola {{usuario}} <a herf="" class="btn btn-danger"> Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></p> 
+            <p class="text-end">Hola {{usuario}} <a herf="/admin/login/logout" class="btn btn-danger"> Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></p> 
         </div>
     </div>
     {{!-- fin fila 1 --}}
@@ -13,8 +13,14 @@
         <div class="col-7">
             <h2>Listado de novedades</h2>
         </div>
-        <div class="col-5 text-end">
+        <div class="col-2 text-end">
             <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fas fa-plus-circle"></i> Nuevo</a>
+        </div>
+        <div class="col-3 text-end">
+            <form class="d-flex" action="/admin/novedades" method="get">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                <button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
     </div>
     {{!-- fin fila 2 --}}
@@ -44,6 +50,12 @@
                     {{/each}}
                 </tbody>
             </table>
+
+            {{#if is_search}}
+                {{#unless}}
+                    <p>No se encontraron resultados para <strong>"{{q}}"</strong></p>
+                {{/unless}}
+            {{/if}}
         </div>
     </div>
     {{!-- fin fila 3 --}}
