@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
       <h2>Para agregar novedad</h2>
-      <form action="/admin/novedades/agregar" method="post">
+      <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
           
             <div class="mb-3">
                 <label for="titulo" class="form-label">Titulo</label>
@@ -10,6 +10,9 @@
             <div class="mb-3">
                 <label for="subtitlo" class="form-label">Subtitulo</label>
                 <textarea class= "form-control" id="subtitulo" rows="3" name = "subtitulo"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="imagen">Imagen <input type="file" name="imagen" id="imagen"></label>
             </div>
             <div class="mb-3">
                 <label for="cuerpo" class="form-label">Cuerpo</label>

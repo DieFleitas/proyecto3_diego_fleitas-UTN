@@ -1,11 +1,11 @@
 <h2>Novedades</h2>
 <div class="buscador">
-    <form action="" method="get">
-        <input type="search" name="q"/>
+    <form action="/novedades" method="get">
+        <input type="search" name="q" {{#if q}} value="{{q}}" {{/if}}/>
         <button type="submit">Buscar</button>
     </form>
-
 </div>
+
 {{#each novedades}}
         <div class="novedades">
             <h3>{{titulo}}</h3>
@@ -14,3 +14,8 @@
             <br>
         </div>
 {{/each}}
+{{#if is_search}}
+    {{#unless novedades.length}}
+        <p>No se encontraron rersultados para <strong>"{{q}}"</strong></p>
+    {{/unless}}
+{{/if}}
